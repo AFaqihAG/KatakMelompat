@@ -314,7 +314,7 @@ public class MainLompatKatak {
         go.inputNama(pemain);
         go.menuPermainan();
 
-        //Set Play = true agar bisa mengulang permainan
+        //Set Play = true agar bisa memulai permainan
         go.setPlay(true);
         while (go.getPlay()) {
             //Atur posisi dan skor awal katak
@@ -331,7 +331,7 @@ public class MainLompatKatak {
             while (katak.getSkor() >= 0 && katak.getPosisi() < (go.getBanyakKotak() - 1)) {
                 //Jika posisi katak berada di kotak[0] atau kotak[1], katak hanya bisa melangkah maju
                 //Jika posisi katak berada di kotak[banyakkotak - 2], paksa katak untuk melangkah ke kotak terakhir
-                //Jika posisi katak berada di antara, maka diperbolehkan untuk maju / mundur
+                //Jika posisi katak berada di antara kedua kondisi di atas, maka diperbolehkan untuk maju / mundur
                 if (katak.getPosisi() >= 2 && katak.getPosisi() <= (go.getBanyakKotak() - 3)) {
                     go.setMajuMundur(go.pilihMajuMundur(katak, pemain, go.getMajuMundur()));
                     if (go.getMajuMundur() == 1) {
